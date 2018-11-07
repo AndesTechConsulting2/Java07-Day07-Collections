@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+import static java.util.Collections.sort;
+
 /**
  * @author Admin
  *
@@ -72,10 +74,22 @@ public class App
 
         Collections.shuffle(arrayList);
 
-        Collections.sort(arrayList, new MySorter());
+        sort(arrayList, new MySorter(false));
 
      //   Collections.sort(arrayList);
       //  Collections.reverse(arrayList);
+
+        System.out.println(arrayList);
+
+
+        Collections.shuffle(arrayList);
+        System.out.println("lambda sorting ----------------------------");
+        System.out.println(arrayList);
+//        arrayList.sort( (Double x, Double y) ->
+//        {   //..
+//            //..
+//            return (int)(x-y);} );
+        arrayList.sort( (o1,o2) -> (int)(o1-o2));
 
         System.out.println(arrayList);
 
