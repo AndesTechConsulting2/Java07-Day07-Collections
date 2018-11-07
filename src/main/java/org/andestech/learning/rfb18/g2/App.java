@@ -110,6 +110,11 @@ public class App
 
         System.out.println(library);
 
+        Collections.sort(library, (b1,b2) -> b1.getAuthor().compareTo(b2.getAuthor()));
+
+        System.out.println(library);
+
+
         //---
         // ADS12387987, GGD9238098, YUU923847987, YHJ23209809
 
