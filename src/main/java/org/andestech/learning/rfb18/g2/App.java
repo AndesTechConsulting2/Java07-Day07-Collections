@@ -1,9 +1,7 @@
 package org.andestech.learning.rfb18.g2;
 
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 import static java.util.Collections.sort;
 
@@ -125,7 +123,7 @@ public class App
 
         accounts.add("GGD9238098");
         accounts.add("AAA1238098");
-        accounts.add("ZZZ2208098");
+        accounts.add("DFG2208098");
         accounts.add("GGD89238");
         accounts.add("GGD01238098");
 
@@ -147,6 +145,53 @@ public class App
          });
 
         System.out.println(accounts);
+
+        // Vector, Stack
+
+        //-- множества
+
+        Set<Integer> set = new LinkedHashSet<>();
+
+        set.add(25); set.add(-12); set.add(25); set.add(1); set.add(10);
+
+        for(int a:  set) {
+            System.out.println( a);
+        }
+        set.remove(25);
+        System.out.println(set);
+
+// удаление дубликатов
+        ArrayList<Integer> arrayList3 =
+                new ArrayList<>();
+        arrayList3.add(0);
+        arrayList3.add(2);
+        arrayList3.add(10);
+        arrayList3.add(1);
+        arrayList3.add(2);
+
+   arrayList3 = new ArrayList<>( new HashSet<>(arrayList3));
+        System.out.println(arrayList3);
+
+   //----- maps
+
+
+   Map map = new HashMap();
+
+   Map<Integer, String> map2 = new HashMap<>();
+
+   map2.put(12, "jhgjhgFFF");
+        map2.put(1, "AAAA");
+        map2.put(-12, "DOCS");
+        map2.put(234, "jhgjhgFFF");
+        map2.put(1, "GGGGGG");
+
+   for (int id: map2.keySet() ) {
+       System.out.println(map2.get(id));
+   }
+
+   System.out.println( map2.values() );
+
+
 
 
 
