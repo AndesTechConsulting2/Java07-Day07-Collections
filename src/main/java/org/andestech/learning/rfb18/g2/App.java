@@ -93,7 +93,22 @@ public class App
 
         System.out.println(arrayList);
 
+//---------------------------------------
 
+        ArrayList<Book> library =
+                new ArrayList<>(10);
+
+        library.add(new Book(1898, "Джек Лондон", "Белое Безмолвие" ));
+
+        library.add(new Book(1889, "Джек Лондон", "Как аргонавты в старину" ));
+
+        library.add(new Book(1879, "Лев Толстой", "Крейцерова соната" ));
+
+        //
+
+        Collections.sort(library);
+
+        System.out.println(library);
 
 
 

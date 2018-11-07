@@ -1,6 +1,6 @@
 package org.andestech.learning.rfb18.g2;
 
-public class Book {
+public class Book implements Comparable<Book>{
     private int year;
 
     public int getYear() {
@@ -39,5 +39,11 @@ public class Book {
     public String toString(){
         return  "Book: " + title + ", by " + author +
                 ", year: " +year;
+    }
+
+
+    @Override
+    public int compareTo(Book o) {
+        return this.year - o.year;
     }
 }
