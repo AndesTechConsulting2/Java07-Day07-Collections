@@ -113,12 +113,35 @@ public class App
         //---
         // ADS12387987, GGD9238098, YUU923847987, YHJ23209809
 
+
+
         ArrayList<String> accounts =
                 new ArrayList<>();
 
+        accounts.add("GGD9238098");
+        accounts.add("AAA1238098");
+        accounts.add("ZZZ2208098");
+        accounts.add("GGD89238");
+        accounts.add("GGD01238098");
 
+        System.out.println(accounts);
 
+         accounts.sort(new Comparator<String>() {
+//             @Override
+//             public int compare(String o1, String o2) {
+//
+//                 return o1.substring(3).compareTo(o2.substring(3));
+//             }
 
+             @Override
+             public int compare(String o1, String o2) {
+
+                 return Integer.parseInt(o1.substring(3)) -
+                         Integer.parseInt(o2.substring(3));
+             }
+         });
+
+        System.out.println(accounts);
 
 
 
